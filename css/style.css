@@ -1,19 +1,18 @@
 /* =============================== */
 /* Общие стили и базовый сброс     */
 /* =============================== */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {  
+  box-sizing: border-box; /* Учитывает padding и border внутри заданных ширины и высоты элемента */  
+  margin: 0; /* Убирает внешние отступы у всех элементов */  
+  padding: 0; /* Убирает внутренние отступы у всех элементов */  
 }
 
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  color: #333;
-  background-color: #fff;
-  line-height: 1.6;
+body {  
+  font-family: system-ui, -apple-system, sans-serif; /* Устанавливает шрифт: system-ui (системный шрифт), -apple-system (шрифт Apple), sans-serif (запасной шрифт без засечек) */  
+  color: #333; /* Задает темно-серый цвет текста */  
+  background-color: #fff; /* Устанавливает белый цвет фона страницы */  
+  line-height: 1.6; /* Увеличивает межстрочный интервал для удобочитаемости текста */  
 }
-
 /* =============================== */
 /* Стили хедера и навигации         */
 /* =============================== */
@@ -21,37 +20,37 @@ header {
   width: 100%;
   padding: 20px 0;
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*создает легкую, мягкую тень*/
 }
 
 /* Центрируем всё меню */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  display: flex; /* Использует Flexbox для размещения элементов внутри контейнера */
+  align-items: center; /* Выравнивает элементы по вертикали (по центру) */
+  justify-content: center; /* Выравнивает элементы по горизонтали (по центру) */
+  position: relative; /* Устанавливает позиционирование относительно родительского контейнера */
   width: 100%;
 }
 
 .burger {
-  display: none;
+  display: none;  /* Скрывает элемент с классом .burger, он не будет отображаться на странице */
 }
 
 .nav-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+  max-width: 1200px; /* Ограничивает максимальную ширину контейнера до 1200 пикселей */
+  margin: 0 auto; /* Центрирует контейнер по горизонтали, автоматически устанавливая отступы слева и справа */
+  display: flex; /* Использует Flexbox для размещения элементов внутри контейнера */
+  gap: 2rem; /* Добавляет пространство между элементами внутри контейнера (2rem) */
+  justify-content: center; /* Выравнивает элементы по горизонтали (по центру) */
 }
 
 .nav a,
 .footer-contacts a {
-  color: #333;
-  /* Исправлено с white на #333 для читаемости */
-  font-size: 14px;
-  text-decoration: none;
-  white-space: nowrap;
+  color: #333; /* Устанавливает цвет текста ссылок в темно-серый (#333) для улучшенной читаемости */
+  /* Исправлено с white на #333 для читаемости */ /* Заменили белый цвет на темный для контраста и удобства восприятия */
+  font-size: 14px; /* Устанавливает размер шрифта ссылок на 14 пикселей */
+  text-decoration: none; /* Убирает подчеркивание у ссылок */
+  white-space: nowrap; /* Предотвращает разбиение текста на несколько строк, текст будет отображаться в одну строку */
 }
 
 nav a:hover {
@@ -59,52 +58,50 @@ nav a:hover {
 }
 
 .nav.show {
-  transform: translateX(0);
+  transform: translateX(0); /* Перемещает навигационное меню по оси X на 0, возвращая его в исходное положение */
 }
 
 nav a[aria-current='page'] {
-  color: #8318a3;
+  color: #8318a3; /* Устанавливает фиолетовый цвет (#8318a3) для ссылок, которые указывают на текущую страницу */
 }
 
 .nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 20px;
+  list-style: none; /* Убирает маркеры (точки или цифры) с элементов списка */
+  margin: 0; /* Убирает внешние отступы у списка */
+  padding: 20px; /* Добавляет внутренний отступ в 20 пикселей вокруг элементов списка */
 }
 
 /* =============================== */
 /* Стили для секций (hero, news и т.д.) */
 /* =============================== */
 .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&auto=format') center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  padding: 2rem;
+  height: 80vh; /* Устанавливает высоту элемента .hero на 80% от высоты видимой области экрана */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Добавляет полупрозрачный черный градиент поверх изображения */
+    url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=1200&auto=format') center/cover; /* Устанавливает фоновое изображение, которое будет центрировано и покрывать весь элемент */
+  display: flex; /* Использует Flexbox для компоновки содержимого внутри .hero */
+  flex-direction: column; /* Выравнивает элементы внутри .hero по вертикали (в колонку) */
+  justify-content: center; /* Центрирует содержимое по вертикали внутри .hero */
+  align-items: center; /* Центрирует содержимое по горизонтали внутри .hero */
+  color: white; /* Устанавливает цвет текста на белый для контраста с фоном */
+  text-align: center; /* Выравнивает текст по центру */
+  padding: 2rem; /* Добавляет отступы внутри .hero (по 2rem со всех сторон) */
 }
-
 .hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 3.5rem; /* Устанавливает размер шрифта заголовка <h1> внутри .hero на 3.5rem */
+  margin-bottom: 1rem; /* Добавляет нижний отступ в 1rem после заголовка, чтобы отделить его от следующего элемента */
 }
-
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.5rem; /* Устанавливает размер шрифта для параграфов внутри .hero на 1.5rem */
 }
 
 main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1200px; /* Ограничивает максимальную ширину элемента main до 1200 пикселей */
+  margin: 0 auto; /* Центрирует элемент main по горизонтали, устанавливая автоматические отступы слева и справа */
+  padding: 2rem; /* Добавляет внутренние отступы по 2rem со всех сторон */
 }
 
 section {
-  margin: 4rem 0;
+ margin: 4rem 0; /* Устанавливает внешний отступ: 4rem сверху и снизу, 0 по бокам */
 }
 
 h2 {
@@ -114,27 +111,27 @@ h2 {
 }
 
 .news-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  display: grid; /* Использует CSS Grid для компоновки элементов внутри .news-grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Определяет количество и ширину колонок:
+    - auto-fit автоматически заполняет доступное пространство;
+    - minmax(300px, 1fr) указывает, что каждая колонка должна быть не меньше 300px, но может расширяться до 1fr (одной доли доступного пространства) */
+  gap: 2rem; /* Устанавливает расстояние между элементами сетки (2rem) */
 }
-
 .news-card {
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  background: white; /* Устанавливает белый фон для карточки новости */
+  border-radius: 8px; /* Закругляет углы карточки на 8px */
+  overflow: hidden; /* Обрезает все содержимое, выходящее за пределы карточки */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Добавляет тень к карточке, создавая эффект приподнятости (смещение 4px по вертикали и 6px размытие) */
+  transition: transform 0.3s ease; /* Добавляет плавный переход для трансформации (например, при наведении) за 0.3 секунды */
 }
-
 .news-card:hover {
-  transform: translateY(-5px);
+   transform: translateY(-5px); /* При наведении на карточку она поднимется на 5 пикселей вверх, создавая эффект "приподнятости" */
 }
 
 .news-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+   object-fit: cover; /* Обеспечивает, чтобы изображение полностью покрывало область, сохраняя пропорции и обрезая лишнее, если необходимо */
 }
 
 .news-content {
@@ -146,22 +143,24 @@ h2 {
 }
 
 .collage {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
+  display: grid; /* Использует CSS Grid для компоновки элементов внутри .collage */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Определяет количество и ширину колонок:
+    - auto-fit автоматически заполняет доступное пространство;
+    - minmax(200px, 1fr) указывает, что каждая колонка должна быть не меньше 200px, но может расширяться до 1fr (одной доли доступного пространства) */
+  gap: 1rem; /* Устанавливает расстояние между элементами сетки (1rem) */
+  margin: 2rem 0; /* Добавляет внешний отступ сверху и снизу (2rem) */
 }
 
 .collage img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  width: 100%; /* Устанавливает ширину изображения на 100% от доступной ширины родительского элемента */
+  height: 200px; /* Устанавливает фиксированную высоту изображения на 200 пикселей */
+  object-fit: cover; /* Обеспечивает, чтобы изображение полностью покрывало область, сохраняя пропорции, обрезая лишнее, если необходимо */
+  border-radius: 8px; /* Закругляет углы изображения на 8px */
+  transition: transform 0.3s ease; /* Добавляет плавный переход для трансформации (например, при наведении) за 0.3 секунды */
 }
 
 .collage img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* При наведении на изображение оно увеличивается на 5% (масштабирование) */
 }
 
 .student-works {
@@ -174,164 +173,164 @@ h2 {
 }
 
 .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Использует Flexbox для компоновки элементов внутри .swiper-slide */
+  justify-content: center; /* Выравнивает содержимое по горизонтали (по центру) */
+  align-items: center; /* Выравнивает содержимое по вертикали (по центру) */
 }
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+ object-fit: cover; /* Обеспечивает, чтобы изображение полностью покрывало область, сохраняя пропорции, обрезая лишнее, если необходимо */
+border-radius: 8px; /* Закругляет углы изображения на 8 пикселей */
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: #2563eb;
+  color: #2563eb; /* Устанавливает синий цвет (#2563eb) для кнопок "следующий" и "предыдущий" слайдера */
 }
 
 .swiper-pagination-bullet-active {
-  background: #2563eb;
+  background: #2563eb; /* Устанавливает синий цвет (#2563eb) для активной пули пагинации (текущий слайд) */
 }
 
 /* =============================== */
 /* Стили футера с изображениями и текстом */
 /* =============================== */
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 40px;
-  width: 100%;
+  display: flex; /* Использует Flexbox для компоновки содержимого в футере */
+  flex-wrap: wrap; /* Разрешает элементам в футере переноситься на новую строку, если это необходимо */
+  align-items: center; /* Выравнивает элементы по вертикали по центру */
+  justify-content: center; /* Выравнивает элементы по горизонтали по центру */
+  background-color: #333; /* Устанавливает темный фон для футера */
+  color: white; /* Устанавливает белый цвет текста */
+  text-align: center; /* Выравнивает текст по центру */
+  padding: 40px; /* Добавляет отступы вокруг содержимого футера */
+  width: 100%; /* Устанавливает ширину футера на 100% от доступной ширины */
 }
 
 footer p {
-  margin: 0 20px;
+  margin: 0 20px; /* Добавляет горизонтальные отступы по 20px для параграфов внутри футера */
 }
 
 .F1 {
-  position: static;
-  width: 200px;
-  margin-right: 20px;
+  position: static; /* Устанавливает статичное позиционирование для элемента .F1 */
+  width: 200px; /* Устанавливает ширину элемента .F1 на 200px */
+  margin-right: 20px; /* Добавляет отступ справа на 20px */
 }
 
 .F2 {
-  position: static;
-  width: 130px;
-  height: 135px;
-  margin-left: 20px;
+  position: static; /* Устанавливает статичное позиционирование для элемента .F2 */
+  width: 130px; /* Устанавливает ширину элемента .F2 на 130px */
+  height: 135px; /* Устанавливает высоту элемента .F2 на 135px */
+  margin-left: 20px; /* Добавляет отступ слева на 20px */
 }
 
 .nav li {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Добавляет нижний отступ 20px для элементов списка в навигации */
 }
 
 /* -----GALLERY (Карусель) ----- */
 .gallery {
-  background: #c8abde;
-  padding: 75px 0;
-  height: 550px;
-  width: 100%;
-  overflow: visible;
-  transition: height 0.3s ease;
+  background: #c8abde; /* Устанавливает фоновый цвет для галереи */
+  padding: 75px 0; /* Добавляет отступы сверху и снизу галереи (75px) */
+  height: 550px; /* Устанавливает начальную высоту галереи на 550px */
+  width: 100%; /* Устанавливает ширину галереи на 100% от доступной ширины */
+  overflow: visible; /* Разрешает видимость содержимого, выходящего за пределы галереи */
+  transition: height 0.3s ease; /* Добавляет плавный переход для изменения высоты галереи */
 }
 
 .gallery:hover {
-  height: 700px;
+  height: 700px; /* При наведении на галерею увеличивает её высоту до 700px */
 }
 
 .gallery-cell {
-  width: 56%;
-  height: 400px;
-  margin-right: 10px;
-  background: #ffffff;
-  counter-increment: gallery-cell;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: height 0.3s ease, transform 0.3s ease;
+  width: 56%; /* Устанавливает ширину элемента галереи (ячейки) на 56% от родительского контейнера */
+  height: 400px; /* Устанавливает высоту ячейки галереи на 400px */
+  margin-right: 10px; /* Добавляет правый отступ в 10px между ячейками */
+  background: #ffffff; /* Устанавливает белый фон для ячейки галереи */
+  counter-increment: gallery-cell; /* Увеличивает счетчик для каждой ячейки галереи (можно использовать для нумерации) */
+  border-radius: 15px; /* Закругляет углы ячейки на 15px */
+  overflow: hidden; /* Обрезает все содержимое, выходящее за пределы ячейки */
+  transition: height 0.3s ease, transform 0.3s ease; /* Добавляет плавный переход для изменения высоты и масштаба ячейки */
 }
 
 .gallery-cell:hover {
-  height: 600px;
-  transform: scale(1.05);
+  height: 600px; /* При наведении на ячейку увеличивает её высоту до 600px */
+  transform: scale(1.05); /* При наведении увеличивает размер ячейки на 5% */
 }
 
 .gallery-text-block {
-  margin-left: 390px;
-  margin-top: -350px;
-  transition: all 0.3s ease;
+  margin-left: 390px; /* Добавляет левый отступ в 390px для позиционирования текста */
+  margin-top: -350px; /* Добавляет отрицательный верхний отступ для позиционирования текста сверху */
+  transition: all 0.3s ease; /* Добавляет плавный переход для всех изменений стилей */
 }
 
 /* --------TEXT STYLE-------- */
 h3 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1.2;
+  font-size: 20px; /* Устанавливает размер шрифта для заголовка h3 на 20px */
+  font-weight: 700; /* Устанавливает жирность шрифта для заголовка h3 (700 — очень жирный) */
+  line-height: 1.2; /* Устанавливает межстрочное расстояние для h3 (на 20% больше, чем размер шрифта) */
 }
 
 h4 {
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.2;
+  font-size: 18px; /* Устанавливает размер шрифта для заголовка h4 на 18px */
+  font-weight: 600; /* Устанавливает жирность шрифта для заголовка h4 (600 — средняя жирность) */
+  line-height: 1.2; /* Устанавливает межстрочное расстояние для h4 (на 20% больше, чем размер шрифта) */
 }
 
 p {
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: 500;
+  line-height: 1.2; /* Устанавливает межстрочное расстояние для параграфа (на 20% больше, чем размер шрифта) */
+  font-size: 18px; /* Устанавливает размер шрифта для параграфа на 18px */
+  font-weight: 500; /* Устанавливает жирность шрифта для параграфа (500 — средняя жирность) */
 }
 
 .button {
-  color: #191919;
-  padding: 7px 15px;
-  margin-top: 10px;
-  border: 2px solid #1f1f1f;
-  background: #bf9fdb;
-  border-radius: 15px;
-  justify-content: center;
-  transition: all 0.3s ease;
+  color: #191919; /* Устанавливает цвет текста для кнопки (темный серый) */
+  padding: 7px 15px; /* Добавляет внутренние отступы в кнопке: 7px сверху и снизу, 15px слева и справа */
+  margin-top: 10px; /* Добавляет верхний отступ 10px для кнопки */
+  border: 2px solid #1f1f1f; /* Устанавливает границу для кнопки с темно-серым цветом */
+  background: #bf9fdb; /* Устанавливает фоновый цвет кнопки (светлый фиолетовый) */
+  border-radius: 15px; /* Закругляет углы кнопки на 15px */
+  justify-content: center; /* Выравнивает содержимое кнопки по центру */
+  transition: all 0.3s ease; /* Добавляет плавный переход для всех изменений стилей за 0.3 секунды */
 }
 
 .button:hover {
-  color: #191919;
-  padding: 9px 17px;
-  background-color: #49b3e9;
-  box-shadow: 5px 4px 15px rgba(22, 21, 32, 0.489);
+  color: #191919; /* Цвет текста не изменяется при наведении */
+  padding: 9px 17px; /* Увеличивает внутренние отступы кнопки при наведении (увеличение на 2px) */
+  background-color: #49b3e9; /* Изменяет фоновый цвет кнопки на синий при наведении */
+  box-shadow: 5px 4px 15px rgba(22, 21, 32, 0.489); /* Добавляет тень вокруг кнопки при наведении */
 }
 
 .button-text {
-  color: #2e2e2e;
-  line-height: 1.2;
-  font-weight: 500;
+  color: #2e2e2e; /* Устанавливает цвет текста для кнопки на темно-серый */
+  line-height: 1.2; /* Устанавливает межстрочное расстояние для текста кнопки (на 20% больше, чем размер шрифта) */
+  font-weight: 500; /* Устанавливает жирность шрифта для текста кнопки (500 — средняя жирность) */
 }
+
 
 /* ----Programs---- */
 .container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+  display: flex; /* Использует Flexbox для размещения элементов внутри контейнера */
+  justify-content: space-between; /* Размещает дочерние элементы с максимальным возможным пространством между ними */
+  margin-top: 20px; /* Добавляет верхний отступ 20px для контейнера */
 }
 
 .left-block {
-  width: 75%;
-  padding: 20px;
+  width: 75%; /* Устанавливает ширину левого блока на 75% от ширины контейнера */
+  padding: 20px; /* Добавляет внутренние отступы в левый блок (20px со всех сторон) */
 }
 
 .right-block {
-  width: 25%;
-  display: flex;
-  justify-content: center;
+  width: 25%; /* Устанавливает ширину правого блока на 25% от ширины контейнера */
+  display: flex; /* Использует Flexbox внутри правого блока для выравнивания содержимого */
+  justify-content: center; /* Центрирует содержимое внутри правого блока по горизонтали */
 }
 
 .right-block img {
-  max-width: 100%;
-  height: auto;
-}
+  max-width: 100%; /* Устанавливает максимальную ширину изображения на 100% от ширины родительского контейнера */
+  height: auto; /* Сохраняет пропорции изображения, автоматически регулируя его в
 
 /* ----Forma (school)---- */
 nav {
