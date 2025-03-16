@@ -9,22 +9,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Инициализация Swiper (если на странице есть соответствующий блок)
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
+    slidesPerView: 1, /*по умолчанию показывается 1 слайд.*/
     spaceBetween: 30,
-    loop: true,
-    pagination: {
+    loop: true, /*включен бесконечный цикл.*/
+    pagination: { /*управляют точками навигации и стрелками.*/
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
+    navigation: { /*как и pagination*/
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-      delay: 3000,
+      delay: 3000, /*слайды сменяются автоматически каждые 3 секунды.*/
       disableOnInteraction: false,
     },
-    breakpoints: {
+    breakpoints: { /*задана адаптивность*/
       640: {
         slidesPerView: 2,
       },
@@ -103,7 +103,7 @@ window.addEventListener('load', function() {
 const preloader = document.querySelector('.preloader');
 preloader.classList.add('preloader-finish');
 setTimeout(() => {
- preloader.style.display = 'none';
+ preloader.style.display = 'none'; /*останавливает preloader*/
 }, 500);
 });
 
