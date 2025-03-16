@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Обработка события window.load для прелоадера (если используется)
+// Обработка события window.load для прелоадера 
 window.addEventListener('load', function () {
   const preloader = document.querySelector('.preloader');
   if (preloader) {
@@ -60,7 +60,7 @@ window.addEventListener('load', function () {
   }
 });
 
-// Функция "Читать больше/Читать меньше" (если используется на странице)
+// Функция "Читать больше/Читать меньше" 
 function myFunction() {
   var dots = document.getElementById("dots");
   var moreText = document.getElementById("more");
@@ -77,7 +77,7 @@ function myFunction() {
   }
 }
 
-// Пример кода для работы с выбором региона (если используются соответствующие элементы)
+// Пример кода для работы с выбором региона 
 var all_regions = [];
 var all_cites = [[], [], []];
 all_regions[0] = ["lupta sambo", " box ", "kikboxing", "lupta judo", " heltere "];
@@ -122,10 +122,4 @@ $('.back-to-top').removeClass('active');
 }
 });
 
-/*---Перевод---*/
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-      { pageLanguage: 'ro', includedLanguages: 'ru,es,fr,de,it', autoDisplay: false },
-      'google_translate_element'
-  );
-}
+
